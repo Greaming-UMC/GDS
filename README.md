@@ -1,4 +1,4 @@
-# GDS 0.1
+# GDS 0.0.1
 Greaming Design System
 
 React 앱용 디자인 시스템 패키지.
