@@ -3,13 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-
-  "files": ["dist", "theme.css"],
-
+  "files": [
+    "dist",
+    "theme.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -17,21 +17,19 @@
     },
     "./theme.css": "./theme.css"
   },
-
-  "sideEffects": ["*.css"],
-
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint ."
   },
-
   "peerDependencies": {
     "react": "^19",
     "react-dom": "^19"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
@@ -46,5 +44,9 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vite-plugin-dts": "^4.5.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18"
   }
 }

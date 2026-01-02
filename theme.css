@@ -1,0 +1,8 @@
+@theme {
+  --color-primary: #121315;
+  --color-secondary: #c6f065;
+  --color-error: #ef4444;
+
+  --font-plain: "Pretendard Variable", Pretendard, system-ui, sans-serif;
+  --font-brand: "KNWave", system-ui, sans-serif;
+}
