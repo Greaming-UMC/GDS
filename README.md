@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# GDS 0.1
+Greaming Design System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React 앱용 디자인 시스템 패키지.
 
-Currently, two official plugins are available:
+## 앱 레포 연결
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 옵션 A: 로컬 프리뷰 (file dependency)
+퍼블리시 없이 로컬에서 컴포넌트를 확인할 때 사용.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+# from the app repo
+pnpm add ../GDS
+pnpm -C ../GDS install
+pnpm -C ../GDS build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+참고: 패키지 엔트리는 `dist`를 읽으므로, 앱에 반영하려면
+`pnpm -C ../GDS build`가 필요합니다.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 옵션 B: 배포 패키지
+레지스트리에서 사용할 때.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+pnpm add @greaming/gds
+pnpm up @greaming/gds
+```
+
+## Tailwind v4 테마 토큰
+
+`theme.css`는 `@theme`를 사용하므로 Tailwind 빌드에서 처리돼야 합니다.
+앱의 전역 CSS(Tailwind를 import하는 파일)에서 아래처럼 import 하세요:
+
+```css
+@import "tailwindcss/theme";
+@import "@greaming/gds/theme.css";
+@import "tailwindcss/utilities";
+```
+
+그 다음 유틸리티로 토큰을 사용합니다:
+
+```html
+<button class="bg-primary text-white font-brand">Button</button>
+```
+
+## 로컬 개발
+
+```sh
+pnpm install
+pnpm dev
+pnpm build
 ```
