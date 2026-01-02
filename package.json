@@ -3,16 +3,35 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+
+  "files": ["dist", "theme.css"],
+
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./theme.css": "./theme.css"
+  },
+
+  "sideEffects": ["*.css"],
+
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
   },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+
+  "peerDependencies": {
+    "react": "^19",
+    "react-dom": "^19"
   },
+
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
