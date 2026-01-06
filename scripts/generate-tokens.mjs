@@ -239,17 +239,31 @@ const extractTypeScaleUtilities = (data, fontVarMap, weightVarMap) => {
     const fontWeight =
       weightValue && weightVarMap.get(String(weightValue)) ? weightVarMap.get(String(weightValue)) : null
 
-    lines.push(`  .${key} {`)
-    if (fontFamily) lines.push(`    font-family: ${fontFamily};`)
-    if (fontWeight) lines.push(`    font-weight: ${fontWeight};`)
-    if (typeof size === 'number') lines.push(`    font-size: var(--text-${key});`)
-    if (typeof lineHeight === 'number') {
-      lines.push(`    line-height: var(--text-${key}--line-height);`)
+    const pushTypeScaleClass = (className, weightVar) => {
+      lines.push(`  .${className} {`)
+      if (fontFamily) lines.push(`    font-family: ${fontFamily};`)
+      if (weightVar) lines.push(`    font-weight: ${weightVar};`)
+      if (typeof size === 'number') lines.push(`    font-size: var(--text-${key});`)
+      if (typeof lineHeight === 'number') {
+        lines.push(`    line-height: var(--text-${key}--line-height);`)
+      }
+      if (typeof tracking === 'number') {
+        lines.push(`    letter-spacing: var(--text-${key}--letter-spacing);`)
+      }
+      lines.push('  }')
     }
-    if (typeof tracking === 'number') {
-      lines.push(`    letter-spacing: var(--text-${key}--letter-spacing);`)
+
+    pushTypeScaleClass(key, fontWeight)
+
+    const emphasizedWeightValue = token?.['weight-emphasized']?.$value
+    const emphasizedWeight =
+      emphasizedWeightValue && weightVarMap.get(String(emphasizedWeightValue))
+        ? weightVarMap.get(String(emphasizedWeightValue))
+        : null
+
+    if (emphasizedWeight) {
+      pushTypeScaleClass(`${key}-emphasized`, emphasizedWeight)
     }
-    lines.push('  }')
   }
 
   return lines

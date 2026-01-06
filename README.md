@@ -51,6 +51,9 @@ pnpm add @greaming/gds
 `state-layer`는 `::before` 레이어를 만들어 hover 시에만 보이게 합니다.  
 오버레이 색상은 `primary-opacity-8`, `secondary-opacity-10`처럼 토큰 클래스로 지정합니다.
 
+타이포 강조 버전은 `-emphasized` 접미사를 사용합니다.  
+예: `display-large-emphasized`, `label-large-emphasized`
+
 ## 5) 폰트 파일
 
 `theme.css`는 **폰트 이름만 정의**합니다.  
