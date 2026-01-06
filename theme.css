@@ -1,8 +1,354 @@
+/* AUTO-GENERATED: do not edit directly. */
 @theme {
-  --color-primary: #121315;
-  --color-secondary: #c6f065;
-  --color-error: #ef4444;
+  --color-error: rgb(255 90 90);
+  --color-on-primary: rgb(252 252 252);
+  --color-on-secondary: rgb(18 19 21);
+  --color-on-surface: rgb(18 19 21);
+  --color-on-surface-variant-bright: rgb(252 252 252);
+  --color-on-surface-variant-dim: rgb(35 36 38);
+  --color-on-surface-variant-highest: rgb(243 243 243);
+  --color-on-surface-variant-low: rgb(182 182 183);
+  --color-on-surface-variant-lowest: rgb(133 133 134);
+  --color-outline: rgb(35 36 38);
+  --color-outline-variant: rgb(182 182 183);
+  --color-primary: rgb(18 19 21);
+  --color-secondary: rgb(198 240 101);
+  --color-secondary-variant: rgb(133 179 26);
+  --color-surface: rgb(252 252 252);
+  --color-surface-variant-high: rgb(243 243 243);
+  --color-surface-variant-low: rgb(231 231 231);
+  --color-surface-variant-lowest: rgb(84 85 86);
+  --color-state-layers-error-opacity-8: rgb(240 238 233 / 0.08);
+  --color-state-layers-error-opacity-10: rgb(240 238 233 / 0.1);
+  --color-state-layers-error-opacity-16: rgb(240 238 233 / 0.16);
+  --color-state-layers-error-container-opacity-8: rgb(249 222 220 / 0.08);
+  --color-state-layers-error-container-opacity-10: rgb(249 222 220 / 0.1);
+  --color-state-layers-error-container-opacity-16: rgb(249 222 220 / 0.16);
+  --color-state-layers-primary-opacity-8: rgb(18 19 21 / 0.08);
+  --color-state-layers-primary-opacity-10: rgb(18 19 21 / 0.1);
+  --color-state-layers-primary-opacity-16: rgb(18 19 21 / 0.16);
+  --color-state-layers-primary-container-opacity-8: rgb(18 19 21 / 0.08);
+  --color-state-layers-primary-container-opacity-10: rgb(18 19 21 / 0.1);
+  --color-state-layers-primary-container-opacity-16: rgb(18 19 21 / 0.16);
+  --color-state-layers-secondary-opacity-8: rgb(18 19 21 / 0.08);
+  --color-state-layers-secondary-opacity-10: rgb(18 19 21 / 0.1);
+  --color-state-layers-secondary-opacity-16: rgb(18 19 21 / 0.16);
+  --color-state-layers-secondary-container-opacity-8: rgb(18 19 21 / 0.08);
+  --color-state-layers-secondary-container-opacity-10: rgb(18 19 21 / 0.1);
+  --color-state-layers-secondary-container-opacity-16: rgb(18 19 21 / 0.16);
+  --color-state-layers-surface-container-opacity-8: rgb(18 19 21 / 0.08);
+  --color-state-layers-surface-container-opacity-10: rgb(18 19 21 / 0.1);
+  --color-state-layers-surface-container-opacity-16: rgb(18 19 21 / 0.16);
+  --color-state-layers-surface-variant-opacity-8: rgb(231 229 225 / 0.08);
+  --color-state-layers-surface-variant-opacity-10: rgb(231 229 225 / 0.1);
+  --color-state-layers-surface-variant-opacity-16: rgb(231 229 225 / 0.16);
+  --font-brand: "Knewave";
+  --font-plain: "Pretendard";
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-semi-bold: 600;
+  --tracking-none: 0;
+  --tracking-small: 0.1px;
+  --radius-extra-extra-large: 48px;
+  --radius-extra-large: 28px;
+  --radius-extra-large-increased: 32px;
+  --radius-extra-small: 4px;
+  --radius-full: 1000px;
+  --radius-large: 16px;
+  --radius-large-increased: 20px;
+  --radius-medium: 12px;
+  --radius-none: 0;
+  --radius-small: 8px;
+  --text-body-large: 16px;
+  --text-body-large--line-height: 24px;
+  --text-body-large--letter-spacing: 0.5px;
+  --text-body-medium: 14px;
+  --text-body-medium--line-height: 20px;
+  --text-body-medium--letter-spacing: 0.25px;
+  --text-body-small: 12px;
+  --text-body-small--line-height: 16px;
+  --text-body-small--letter-spacing: 0.4px;
+  --text-body-xlarge: 18px;
+  --text-body-xlarge--line-height: 24px;
+  --text-body-xlarge--letter-spacing: 0.65px;
+  --text-display-large: 52px;
+  --text-display-large--line-height: 62px;
+  --text-display-large--letter-spacing: -0.25px;
+  --text-display-medium: 45px;
+  --text-display-medium--line-height: 52px;
+  --text-display-medium--letter-spacing: 0;
+  --text-display-small: 36px;
+  --text-display-small--line-height: 44px;
+  --text-display-small--letter-spacing: 0;
+  --text-label-large: 14px;
+  --text-label-large--line-height: 20px;
+  --text-label-large--letter-spacing: 0.1px;
+  --text-label-medium: 12px;
+  --text-label-medium--line-height: 16px;
+  --text-label-medium--letter-spacing: 0.5px;
+  --text-label-small: 11px;
+  --text-label-small--line-height: 16px;
+  --text-label-small--letter-spacing: 0.5px;
+  --text-label-xlarge: 16px;
+  --text-label-xlarge--line-height: 24px;
+  --text-label-xlarge--letter-spacing: 0.1px;
+  --text-label-xxlarge: 18px;
+  --text-label-xxlarge--line-height: 24px;
+  --text-label-xxlarge--letter-spacing: 0.1px;
+  --text-label-xxxlarge: 20px;
+  --text-label-xxxlarge--line-height: 26px;
+  --text-label-xxxlarge--letter-spacing: 0;
+  --text-main-title-large: 32px;
+  --text-main-title-large--line-height: 40px;
+  --text-main-title-large--letter-spacing: 0;
+  --text-main-title-medium: 28px;
+  --text-main-title-medium--line-height: 36px;
+  --text-main-title-medium--letter-spacing: 0;
+  --text-main-title-small: 24px;
+  --text-main-title-small--line-height: 32px;
+  --text-main-title-small--letter-spacing: 0;
+  --text-sub-title-large: 18px;
+  --text-sub-title-large--line-height: 26px;
+  --text-sub-title-large--letter-spacing: 0.15px;
+  --text-sub-title-medium: 16px;
+  --text-sub-title-medium--line-height: 24px;
+  --text-sub-title-medium--letter-spacing: 0.15px;
+  --text-sub-title-small: 14px;
+  --text-sub-title-small--line-height: 20px;
+  --text-sub-title-small--letter-spacing: 0.1px;
+  --text-sub-title-xlarge: 20px;
+  --text-sub-title-xlarge--line-height: 28px;
+  --text-sub-title-xlarge--letter-spacing: 0;
+}
 
-  --font-plain: "Pretendard Variable", Pretendard, system-ui, sans-serif;
-  --font-brand: "KNWave", system-ui, sans-serif;
+@layer utilities {
+  .state-layer {
+    position: relative;
+    overflow: hidden;
+  }
+  .state-layer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--state-layer-color, transparent);
+    opacity: 0;
+    transition: opacity 150ms ease;
+    pointer-events: none;
+  }
+  .state-layer:hover::before {
+    opacity: 1;
+  }
+  .error-opacity-8 {
+    --state-layer-color: var(--color-state-layers-error-opacity-8);
+  }
+  .error-opacity-10 {
+    --state-layer-color: var(--color-state-layers-error-opacity-10);
+  }
+  .error-opacity-16 {
+    --state-layer-color: var(--color-state-layers-error-opacity-16);
+  }
+  .error-container-opacity-8 {
+    --state-layer-color: var(--color-state-layers-error-container-opacity-8);
+  }
+  .error-container-opacity-10 {
+    --state-layer-color: var(--color-state-layers-error-container-opacity-10);
+  }
+  .error-container-opacity-16 {
+    --state-layer-color: var(--color-state-layers-error-container-opacity-16);
+  }
+  .primary-opacity-8 {
+    --state-layer-color: var(--color-state-layers-primary-opacity-8);
+  }
+  .primary-opacity-10 {
+    --state-layer-color: var(--color-state-layers-primary-opacity-10);
+  }
+  .primary-opacity-16 {
+    --state-layer-color: var(--color-state-layers-primary-opacity-16);
+  }
+  .primary-container-opacity-8 {
+    --state-layer-color: var(--color-state-layers-primary-container-opacity-8);
+  }
+  .primary-container-opacity-10 {
+    --state-layer-color: var(--color-state-layers-primary-container-opacity-10);
+  }
+  .primary-container-opacity-16 {
+    --state-layer-color: var(--color-state-layers-primary-container-opacity-16);
+  }
+  .secondary-opacity-8 {
+    --state-layer-color: var(--color-state-layers-secondary-opacity-8);
+  }
+  .secondary-opacity-10 {
+    --state-layer-color: var(--color-state-layers-secondary-opacity-10);
+  }
+  .secondary-opacity-16 {
+    --state-layer-color: var(--color-state-layers-secondary-opacity-16);
+  }
+  .secondary-container-opacity-8 {
+    --state-layer-color: var(--color-state-layers-secondary-container-opacity-8);
+  }
+  .secondary-container-opacity-10 {
+    --state-layer-color: var(--color-state-layers-secondary-container-opacity-10);
+  }
+  .secondary-container-opacity-16 {
+    --state-layer-color: var(--color-state-layers-secondary-container-opacity-16);
+  }
+  .surface-container-opacity-8 {
+    --state-layer-color: var(--color-state-layers-surface-container-opacity-8);
+  }
+  .surface-container-opacity-10 {
+    --state-layer-color: var(--color-state-layers-surface-container-opacity-10);
+  }
+  .surface-container-opacity-16 {
+    --state-layer-color: var(--color-state-layers-surface-container-opacity-16);
+  }
+  .surface-variant-opacity-8 {
+    --state-layer-color: var(--color-state-layers-surface-variant-opacity-8);
+  }
+  .surface-variant-opacity-10 {
+    --state-layer-color: var(--color-state-layers-surface-variant-opacity-10);
+  }
+  .surface-variant-opacity-16 {
+    --state-layer-color: var(--color-state-layers-surface-variant-opacity-16);
+  }
+  .body-large {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-body-large);
+    line-height: var(--text-body-large--line-height);
+    letter-spacing: var(--text-body-large--letter-spacing);
+  }
+  .body-medium {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-body-medium);
+    line-height: var(--text-body-medium--line-height);
+    letter-spacing: var(--text-body-medium--letter-spacing);
+  }
+  .body-small {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-body-small);
+    line-height: var(--text-body-small--line-height);
+    letter-spacing: var(--text-body-small--letter-spacing);
+  }
+  .body-xlarge {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-body-xlarge);
+    line-height: var(--text-body-xlarge--line-height);
+    letter-spacing: var(--text-body-xlarge--letter-spacing);
+  }
+  .display-large {
+    font-family: var(--font-brand);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-display-large);
+    line-height: var(--text-display-large--line-height);
+    letter-spacing: var(--text-display-large--letter-spacing);
+  }
+  .display-medium {
+    font-family: var(--font-brand);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-display-medium);
+    line-height: var(--text-display-medium--line-height);
+    letter-spacing: var(--text-display-medium--letter-spacing);
+  }
+  .display-small {
+    font-family: var(--font-brand);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-display-small);
+    line-height: var(--text-display-small--line-height);
+    letter-spacing: var(--text-display-small--letter-spacing);
+  }
+  .label-large {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-label-large);
+    line-height: var(--text-label-large--line-height);
+    letter-spacing: var(--text-label-large--letter-spacing);
+  }
+  .label-medium {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-label-medium);
+    line-height: var(--text-label-medium--line-height);
+    letter-spacing: var(--text-label-medium--letter-spacing);
+  }
+  .label-small {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-label-small);
+    line-height: var(--text-label-small--line-height);
+    letter-spacing: var(--text-label-small--letter-spacing);
+  }
+  .label-xlarge {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-label-xlarge);
+    line-height: var(--text-label-xlarge--line-height);
+    letter-spacing: var(--text-label-xlarge--letter-spacing);
+  }
+  .label-xxlarge {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-label-xxlarge);
+    line-height: var(--text-label-xxlarge--line-height);
+    letter-spacing: var(--text-label-xxlarge--letter-spacing);
+  }
+  .label-xxxlarge {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-label-xxxlarge);
+    line-height: var(--text-label-xxxlarge--line-height);
+    letter-spacing: var(--text-label-xxxlarge--letter-spacing);
+  }
+  .main-title-large {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-main-title-large);
+    line-height: var(--text-main-title-large--line-height);
+    letter-spacing: var(--text-main-title-large--letter-spacing);
+  }
+  .main-title-medium {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-main-title-medium);
+    line-height: var(--text-main-title-medium--line-height);
+    letter-spacing: var(--text-main-title-medium--letter-spacing);
+  }
+  .main-title-small {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-main-title-small);
+    line-height: var(--text-main-title-small--line-height);
+    letter-spacing: var(--text-main-title-small--letter-spacing);
+  }
+  .sub-title-large {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-sub-title-large);
+    line-height: var(--text-sub-title-large--line-height);
+    letter-spacing: var(--text-sub-title-large--letter-spacing);
+  }
+  .sub-title-medium {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-sub-title-medium);
+    line-height: var(--text-sub-title-medium--line-height);
+    letter-spacing: var(--text-sub-title-medium--letter-spacing);
+  }
+  .sub-title-small {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-sub-title-small);
+    line-height: var(--text-sub-title-small--line-height);
+    letter-spacing: var(--text-sub-title-small--letter-spacing);
+  }
+  .sub-title-xlarge {
+    font-family: var(--font-plain);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--text-sub-title-xlarge);
+    line-height: var(--text-sub-title-xlarge--line-height);
+    letter-spacing: var(--text-sub-title-xlarge--letter-spacing);
+  }
 }

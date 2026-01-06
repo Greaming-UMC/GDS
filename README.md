@@ -1,52 +1,57 @@
-# GDS 0.0.2
-Greaming Design System
+# GDS (Greaming Design System)
 
-React 앱용 디자인 시스템 패키지.
+이 레포는 **Figma 토큰(JSON)**을 기준으로  
+Tailwind에서 쓰는 **`theme.css`**를 자동 생성합니다.
 
-## 앱 레포 연결
+## 1) 토큰 위치
 
-### 옵션 A: 로컬 프리뷰 (file dependency)
-퍼블리시 없이 로컬에서 컴포넌트를 확인할 때 사용.
+- `src/tokens/color.json`
+- `src/tokens/font.json`
+- `src/tokens/shape.json`
+- `src/tokens/typescale.json`
+
+## 2) `theme.css` 생성
 
 ```sh
-# from the app repo
-pnpm add ../GDS
-pnpm -C ../GDS install
-pnpm -C ../GDS build
+pnpm tokens:build
 ```
 
-참고: 패키지 엔트리는 `dist`를 읽으므로, 앱에 반영하려면
-`pnpm -C ../GDS build`가 필요합니다.
+`theme.css`는 **자동 생성 파일**입니다. 직접 수정하지 마세요.
 
-### 옵션 B: 배포 패키지
-레지스트리에서 사용할 때.
+## 3) 프론트 적용
+
+1. 설치
 
 ```sh
 pnpm add @greaming/gds
-pnpm up @greaming/gds
 ```
 
-## Tailwind v4 테마 토큰
-
-`theme.css`는 `@theme`를 사용하므로 Tailwind 빌드에서 처리돼야 합니다.
-앱의 전역 CSS(Tailwind를 import하는 파일)에서 아래처럼 import 하세요:
+2. 전역 CSS import
 
 ```css
-@import "tailwindcss/theme";
 @import "@greaming/gds/theme.css";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
 ```
 
-그 다음 유틸리티로 토큰을 사용합니다:
+## 4) 예시 (각 요소 1회)
 
-```html
-<button class="bg-primary text-white font-brand">Button</button>
+```tsx
+<button className="display-large bg-secondary text-on-secondary rounded-medium state-layer secondary-opacity-8">
+  GDS Button
+</button>
 ```
 
-## 로컬 개발
+- `display-large`: 타이포그래피(폰트/크기/자간/행간 포함)
+- `bg-secondary`: 컬러 토큰
+- `text-on-secondary`: 컬러 토큰
+- `rounded-medium`: 라운드 토큰
+- `state-layer`: 재사용 가능한 hover 오버레이 동작
+- `secondary-opacity-8`: 오버레이 컬러 토큰
 
-```sh
-pnpm install
-pnpm dev
-pnpm build
-```
+`state-layer`는 `::before` 레이어를 만들어 hover 시에만 보이게 합니다.  
+오버레이 색상은 `primary-opacity-8`, `secondary-opacity-10`처럼 토큰 클래스로 지정합니다.
+
+## 5) 폰트 파일
+
+`theme.css`는 **폰트 이름만 정의**합니다.  
+실제 폰트 파일(.woff2)은 **프론트 레포에서 로드**해야 합니다.

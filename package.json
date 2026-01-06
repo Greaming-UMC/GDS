@@ -22,9 +22,10 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm tokens:build && vite build",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "tokens:build": "node scripts/generate-tokens.mjs"
   },
   "peerDependencies": {
     "react": "^19",

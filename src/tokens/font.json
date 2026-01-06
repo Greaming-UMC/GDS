@@ -1,0 +1,83 @@
+{
+  "static": {
+    "font": {
+      "brand": {
+        "$type": "string",
+        "$value": "Knewave",
+        "$extensions": {
+          "com.figma.type": "string",
+          "com.figma.variableId": "VariableID:1229:153422",
+          "com.figma.hiddenFromPublishing": true
+        }
+      },
+      "plain": {
+        "$type": "string",
+        "$value": "Pretendard",
+        "$extensions": {
+          "com.figma.type": "string",
+          "com.figma.variableId": "VariableID:1229:153418",
+          "com.figma.hiddenFromPublishing": true
+        }
+      }
+    },
+    "weight": {
+      "regular": {
+        "$type": "string",
+        "$value": "Regular",
+        "$extensions": {
+          "com.figma.type": "string",
+          "com.figma.variableId": "VariableID:1229:153421",
+          "com.figma.hiddenFromPublishing": true
+        }
+      },
+      "medium": {
+        "$type": "string",
+        "$value": "Medium",
+        "$extensions": {
+          "com.figma.type": "string",
+          "com.figma.variableId": "VariableID:1229:153417",
+          "com.figma.hiddenFromPublishing": true
+        }
+      },
+      "semi-bold": {
+        "$type": "string",
+        "$value": "SemiBold",
+        "$extensions": {
+          "com.figma.type": "string",
+          "com.figma.variableId": "VariableID:1229:153420",
+          "com.figma.hiddenFromPublishing": true
+        }
+      },
+      "bold": {
+        "$type": "string",
+        "$value": "Bold",
+        "$extensions": {
+          "com.figma.type": "string",
+          "com.figma.variableId": "VariableID:1339:41132",
+          "com.figma.hiddenFromPublishing": true
+        }
+      }
+    }
+  },
+  "tracking": {
+    "none": {
+      "$type": "number",
+      "$value": 0,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1229:153419",
+        "com.figma.hiddenFromPublishing": true
+      }
+    },
+    "small": {
+      "$type": "number",
+      "$value": 0.10000000149011612,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:1229:153416",
+        "com.figma.hiddenFromPublishing": true
+      }
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Mode 1"
+  }
+}
