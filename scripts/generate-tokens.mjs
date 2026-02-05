@@ -19,9 +19,17 @@ const formatNumber = (value) => {
   return rounded % 1 === 0 ? String(Math.trunc(rounded)) : String(rounded)
 }
 
-const formatLength = (value) => {
+const REM_BASE = 16
+
+const formatLengthPx = (value) => {
   const formatted = formatNumber(value)
   return formatted === '0' ? '0' : `${formatted}px`
+}
+
+const formatLengthRem = (value) => {
+  if (typeof value !== 'number') return String(value)
+  const formatted = formatNumber(value / REM_BASE)
+  return formatted === '0' ? '0' : `${formatted}rem`
 }
 
 const formatFont = (value) => {
@@ -158,7 +166,7 @@ const extractFonts = (data) => {
   const tracking = data?.tracking || {}
   for (const key of Object.keys(tracking).sort(compareKeys)) {
     const token = tracking[key]
-    vars.push([`--tracking-${key}`, formatLength(token?.$value ?? 0)])
+    vars.push([`--tracking-${key}`, formatLengthRem(token?.$value ?? 0)])
   }
 
   return vars
@@ -169,7 +177,7 @@ const extractRadius = (data) => {
   const corner = data?.corner || {}
   for (const key of Object.keys(corner).sort(compareKeys)) {
     const token = corner[key]
-    vars.push([`--radius-${key}`, formatLength(token?.$value ?? 0)])
+    vars.push([`--radius-${key}`, formatLengthPx(token?.$value ?? 0)])
   }
   return vars
 }
@@ -183,12 +191,12 @@ const extractTypeScaleVars = (data) => {
     const lineHeight = token?.['line-height']?.$value
     const tracking = token?.tracking?.$value
 
-    if (typeof size === 'number') vars.push([`--text-${key}`, formatLength(size)])
+    if (typeof size === 'number') vars.push([`--text-${key}`, formatLengthRem(size)])
     if (typeof lineHeight === 'number') {
-      vars.push([`--text-${key}--line-height`, formatLength(lineHeight)])
+      vars.push([`--text-${key}--line-height`, formatLengthRem(lineHeight)])
     }
     if (typeof tracking === 'number') {
-      vars.push([`--text-${key}--letter-spacing`, formatLength(tracking)])
+      vars.push([`--text-${key}--letter-spacing`, formatLengthRem(tracking)])
     }
   }
   return vars
