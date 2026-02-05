@@ -8,6 +8,7 @@ Tailwind에서 쓰는 **`theme.css`**를 자동 생성합니다.
 - `src/tokens/color.json`
 - `src/tokens/font.json`
 - `src/tokens/shape.json`
+- `src/tokens/shadow.json`
 - `src/tokens/typescale.json`
 
 ## 2) `theme.css` 생성
@@ -36,7 +37,7 @@ pnpm add @greaming/gds
 ## 4) 예시 (각 요소 1회)
 
 ```tsx
-<button className="display-large bg-secondary text-on-secondary rounded-medium state-layer secondary-opacity-8">
+<button className="display-large bg-secondary text-on-secondary rounded-medium shadow-1 state-layer secondary-opacity-8">
   GDS Button
 </button>
 ```
@@ -45,6 +46,7 @@ pnpm add @greaming/gds
 - `bg-secondary`: 컬러 토큰
 - `text-on-secondary`: 컬러 토큰
 - `rounded-medium`: 라운드 토큰
+- `shadow-1`: 그림자 토큰
 - `state-layer`: 재사용 가능한 hover 오버레이 동작
 - `secondary-opacity-8`: 오버레이 컬러 토큰
 

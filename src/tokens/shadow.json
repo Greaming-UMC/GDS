@@ -1,0 +1,11 @@
+{
+  "shadow": {
+    "1": {
+      "$type": "shadow",
+      "$value": "0 0 4px 0 rgb(18 19 21 / 0.25)"
+    }
+  },
+  "$extensions": {
+    "com.figma.modeName": "Mode 1"
+  }
+}

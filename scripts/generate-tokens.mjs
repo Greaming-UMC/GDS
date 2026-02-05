@@ -182,6 +182,17 @@ const extractRadius = (data) => {
   return vars
 }
 
+const extractShadowVars = (data) => {
+  const vars = []
+  const shadows = data?.shadow || {}
+  for (const key of Object.keys(shadows).sort(compareKeys)) {
+    const token = shadows[key]
+    if (token?.$value === undefined) continue
+    vars.push([`--shadow-${key}`, String(token.$value)])
+  }
+  return vars
+}
+
 const extractTypeScaleVars = (data) => {
   const vars = []
   const types = data?.static || {}
@@ -200,6 +211,19 @@ const extractTypeScaleVars = (data) => {
     }
   }
   return vars
+}
+
+const extractShadowUtilities = (data) => {
+  const lines = []
+  const shadows = data?.shadow || {}
+  for (const key of Object.keys(shadows).sort(compareKeys)) {
+    const token = shadows[key]
+    if (token?.$value === undefined) continue
+    lines.push(`  .shadow-${key} {`)
+    lines.push(`    box-shadow: var(--shadow-${key});`)
+    lines.push('  }')
+  }
+  return lines
 }
 
 const buildFontVarMap = (data) => {
@@ -278,10 +302,11 @@ const extractTypeScaleUtilities = (data, fontVarMap, weightVarMap) => {
 }
 
 const build = async () => {
-  const [colors, fonts, shapes, types] = await Promise.all([
+  const [colors, fonts, shapes, shadows, types] = await Promise.all([
     readJson('color.json'),
     readJson('font.json'),
     readJson('shape.json'),
+    readJson('shadow.json'),
     readJson('typescale.json'),
   ])
 
@@ -293,12 +318,14 @@ const build = async () => {
   addVars(lines, extractStateLayerColors(colors))
   addVars(lines, extractFonts(fonts))
   addVars(lines, extractRadius(shapes))
+  addVars(lines, extractShadowVars(shadows))
   addVars(lines, extractTypeScaleVars(types))
 
   lines.push('}')
   lines.push('')
   lines.push('@layer utilities {')
   lines.push(...extractStateLayerUtilities(colors))
+  lines.push(...extractShadowUtilities(shadows))
   lines.push(...extractTypeScaleUtilities(types, buildFontVarMap(fonts), buildWeightVarMap(fonts)))
   lines.push('}')
   lines.push('')

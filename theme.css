@@ -13,6 +13,7 @@
   --color-outline-variant: rgb(182 182 183);
   --color-primary: rgb(18 19 21);
   --color-secondary: rgb(198 240 101);
+  --color-secondary-1: rgb(198 240 101);
   --color-secondary-variant: rgb(133 179 26);
   --color-surface: rgb(252 252 252);
   --color-surface-variant-high: rgb(243 243 243);
@@ -60,6 +61,7 @@
   --radius-medium: 12px;
   --radius-none: 0;
   --radius-small: 8px;
+  --shadow-1: 0 0 4px 0 rgb(18 19 21 / 0.25);
   --text-body-large: 1rem;
   --text-body-large--line-height: 1.25rem;
   --text-body-large--letter-spacing: 0;
@@ -210,6 +212,9 @@
   }
   .surface-variant-opacity-16 {
     --state-layer-color: var(--color-state-layers-surface-variant-opacity-16);
+  }
+  .shadow-1 {
+    box-shadow: var(--shadow-1);
   }
   .body-large {
     font-family: var(--font-plain);
