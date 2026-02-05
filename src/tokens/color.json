@@ -57,24 +57,6 @@
         ]
       }
     },
-    "secondary-1": {
-      "$type": "color",
-      "$value": {
-        "colorSpace": "srgb",
-        "components": [
-          0.7764706015586853,
-          0.9411764740943909,
-          0.3960784375667572
-        ],
-        "alpha": 1,
-        "hex": "#C6F065"
-      },
-      "$extensions": {
-        "com.figma.scopes": [
-          "ALL_SCOPES"
-        ]
-      }
-    },
     "on-secondary": {
       "$type": "color",
       "$value": {

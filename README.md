@@ -46,7 +46,8 @@ pnpm add @greaming/gds
 - `bg-secondary`: 컬러 토큰
 - `text-on-secondary`: 컬러 토큰
 - `rounded-medium`: 라운드 토큰
-- `shadow-1`: 그림자 토큰
+- `shadow-1`: 그림자 토큰 프라이머리
+- `shadow-secondary-1`: 그림자 토큰 세컨더리
 - `state-layer`: 재사용 가능한 hover 오버레이 동작
 - `secondary-opacity-8`: 오버레이 컬러 토큰
 

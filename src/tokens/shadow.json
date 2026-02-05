@@ -3,6 +3,10 @@
     "1": {
       "$type": "shadow",
       "$value": "0 0 4px 0 rgb(18 19 21 / 0.25)"
+    },
+    "secondary-1": {
+      "$type": "shadow",
+      "$value": "0 0 4px 0 rgb(198 240 101 / 1)"
     }
   },
   "$extensions": {
